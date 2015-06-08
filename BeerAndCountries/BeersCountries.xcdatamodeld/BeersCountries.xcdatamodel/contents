@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BeerEntity" representedClassName="BeerEntity" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stock" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryEntity" inverseName="beers" inverseEntity="CountryEntity" syncable="YES"/>
+    </entity>
+    <entity name="CountryEntity" representedClassName="CountryEntity" syncable="YES">
+        <attribute name="flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="beers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BeerEntity" inverseName="country" inverseEntity="BeerEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BeerEntity" positionX="-261" positionY="-184" width="198" height="103"/>
+        <element name="CountryEntity" positionX="61" positionY="-196" width="110" height="88"/>
+    </elements>
+</model>
